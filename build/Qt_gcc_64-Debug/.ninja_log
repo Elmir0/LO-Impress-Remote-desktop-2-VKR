@@ -1,0 +1,19 @@
+# ninja log v5
+1620	1932	1763717153262869339	VKR	fd7110baaaa2c3c8
+519	3306	1763210257000856921	CMakeFiles/VKR.dir/VKR_autogen/mocs_compilation.cpp.o	7b342efafa9b739
+43	1620	1763717152949869340	CMakeFiles/VKR.dir/mainwindow.cpp.o	e50d2ea533f4a4d9
+520	4246	1763210257939850387	CMakeFiles/VKR.dir/main.cpp.o	6e24ac81194530ca
+38	2090	1763221500274312760	CMakeFiles/VKR.dir/protocol.cpp.o	50742fe2d7164b5
+4	41	1763717151373869346	/home/elmir/VKR/build/Qt_gcc_64-Debug/VKR_autogen/mocs_compilation.cpp	4431d0caa7a080bd
+4	41	1763717151373869346	/home/elmir/VKR/build/Qt_gcc_64-Debug/VKR_autogen/timestamp	4431d0caa7a080bd
+4	41	1763717151373869346	VKR_autogen/mocs_compilation.cpp	4431d0caa7a080bd
+4	41	1763717151373869346	VKR_autogen/timestamp	4431d0caa7a080bd
+1	183	1764153285299228166	build.ninja	3ca3798090d7059c
+43	872	1763717152201869343	CMakeFiles/VKR.dir/server.cpp.o	d77ba3ebff0cd7ac
+11	54	1764153318552420621	VKR_autogen/timestamp	4431d0caa7a080bd
+11	54	1764153318552420621	VKR_autogen/mocs_compilation.cpp	4431d0caa7a080bd
+11	54	1764153318552420621	/home/elmir/VKR/build/Qt_gcc_64-Debug/VKR_autogen/timestamp	4431d0caa7a080bd
+11	54	1764153318552420621	/home/elmir/VKR/build/Qt_gcc_64-Debug/VKR_autogen/mocs_compilation.cpp	4431d0caa7a080bd
+55	92	1764153318588423653	CMakeFiles/VKR.dir/commandstransmitter.cpp.o	78ab1f169cf7dad8
+55	1253	1764153319747520912	CMakeFiles/VKR.dir/mainwindow.cpp.o	e50d2ea533f4a4d9
+1253	1566	1764153320061547180	VKR	b0d6ef52c1a3bd8f

@@ -1,0 +1,9 @@
+/home/elmir/VKR/build/Qt_gcc_64-Debug/CMakeFiles/VKR.dir
+/home/elmir/VKR/build/Qt_gcc_64-Debug/CMakeFiles/edit_cache.dir
+/home/elmir/VKR/build/Qt_gcc_64-Debug/CMakeFiles/rebuild_cache.dir
+/home/elmir/VKR/build/Qt_gcc_64-Debug/CMakeFiles/list_install_components.dir
+/home/elmir/VKR/build/Qt_gcc_64-Debug/CMakeFiles/install.dir
+/home/elmir/VKR/build/Qt_gcc_64-Debug/CMakeFiles/install/local.dir
+/home/elmir/VKR/build/Qt_gcc_64-Debug/CMakeFiles/install/strip.dir
+/home/elmir/VKR/build/Qt_gcc_64-Debug/CMakeFiles/VKR_autogen_timestamp_deps.dir
+/home/elmir/VKR/build/Qt_gcc_64-Debug/CMakeFiles/VKR_autogen.dir

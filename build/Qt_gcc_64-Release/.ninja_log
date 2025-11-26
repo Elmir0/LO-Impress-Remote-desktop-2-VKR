@@ -1,0 +1,9 @@
+# ninja log v5
+1	198	1760392497160007069	VKR_autogen/timestamp	9f320ecb5e3c5858
+1	198	1760392497160007069	VKR_autogen/mocs_compilation.cpp	9f320ecb5e3c5858
+1	198	1760392497160007069	/home/elmir/VKR/build/Qt_gcc_64-Release/VKR_autogen/timestamp	9f320ecb5e3c5858
+1	198	1760392497160007069	/home/elmir/VKR/build/Qt_gcc_64-Release/VKR_autogen/mocs_compilation.cpp	9f320ecb5e3c5858
+198	1191	1760392498156004659	CMakeFiles/VKR.dir/main.cpp.o	5ef3a1b52c692ade
+198	1221	1760392498186004587	CMakeFiles/VKR.dir/mainwindow.cpp.o	40dc2a0106e9f60f
+198	1630	1760392498596003593	CMakeFiles/VKR.dir/VKR_autogen/mocs_compilation.cpp.o	57c25ae60a2a8f30
+1631	1838	1760392498804003089	VKR	8bce5f0f0485c202

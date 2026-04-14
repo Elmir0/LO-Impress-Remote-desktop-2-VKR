@@ -1,6 +1,5 @@
 #ifndef TCPSERVERCONNECTION_H
 #define TCPSERVERCONNECTION_H
-#include <QObject>
 #include <QTcpSocket>
 #include <QHostAddress>
 #include <QIODevice>
@@ -8,7 +7,6 @@
 class Server;
 class Protocol;
 
-#pragma once
 class TcpServerConnection{
 private:
     Server*mServer;

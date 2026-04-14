@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1770</width>
+    <width>1400</width>
     <height>972</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>LibreOffice Impress Remote</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -28,329 +28,111 @@
      <number>0</number>
     </property>
     <item>
-     <widget class="QWidget" name="sidebar" native="true">
-      <property name="minimumSize">
-       <size>
-        <width>300</width>
-        <height>800</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>300</width>
-        <height>16777215</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: #2c3e50;
-padding: 20px 0px;
-border-right: 3px solid #1e3a5f;</string>
-      </property>
-      <widget class="QLabel" name="logoTitle">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>20</y>
-         <width>241</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>13</pointsize>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color:white</string>
-       </property>
-       <property name="text">
-        <string>LO Impress Remote Desktop</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="logoTitle_2">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>40</y>
-         <width>181</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>11</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color:white</string>
-       </property>
-       <property name="text">
-        <string>Удаленное управление</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="logoTitle_3">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>60</y>
-         <width>181</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>11</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color:white</string>
-       </property>
-       <property name="text">
-        <string>презентациями</string>
-       </property>
-      </widget>
-      <widget class="QWidget" name="controlsWidget" native="true">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>100</y>
-         <width>230</width>
-         <height>200</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: #34495e; border-radius: 5px;</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="logoTitle_4">
-       <property name="geometry">
-        <rect>
-         <x>60</x>
-         <y>850</y>
-         <width>181</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>11</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color:white</string>
-       </property>
-       <property name="text">
-        <string>Эльмир Аббасов</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="logoTitle_5">
-       <property name="geometry">
-        <rect>
-         <x>60</x>
-         <y>870</y>
-         <width>181</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>9</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color:white</string>
-       </property>
-       <property name="text">
-        <string>Докладчик</string>
-       </property>
-      </widget>
-     </widget>
-    </item>
-    <item>
      <widget class="QWidget" name="contentWidget" native="true">
-      <widget class="QFrame" name="frame">
+      <widget class="QWidget" name="headerWidget" native="true">
        <property name="geometry">
         <rect>
-         <x>270</x>
-         <y>20</y>
-         <width>821</width>
-         <height>781</height>
+         <x>279</x>
+         <y>0</y>
+         <width>801</width>
+         <height>60</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: #2c3e50;
-padding: 20px 0px;
-border-right: 3px solid #1e3a5f;</string>
+        <string notr="true">background-color: #2c3e50; border-radius: 10px;</string>
        </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-       <widget class="QWidget" name="mainSlideWidget" native="true">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>100</y>
-          <width>800</width>
-          <height>600</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: white; border: 2px solid #1e3a5f; border-radius: 5px;</string>
-        </property>
-        <widget class="QLabel" name="mainSlideLabel">
-         <property name="geometry">
-          <rect>
-           <x>300</x>
-           <y>290</y>
-           <width>200</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: black; font-size: 16px;</string>
-         </property>
-         <property name="text">
-          <string>Текущий слайд</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </widget>
-       <widget class="QPushButton" name="pushButton">
-        <property name="geometry">
-         <rect>
-          <x>110</x>
-          <y>710</y>
-          <width>61</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true"/>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../Downloads/free-icon-chevron-248424.png</normaloff>../Downloads/free-icon-chevron-248424.png</iconset>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_2">
-        <property name="geometry">
-         <rect>
-          <x>40</x>
-          <y>710</y>
-          <width>61</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true"/>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>../Downloads/free-icon-chevron-248424.png</normaloff>../Downloads/free-icon-chevron-248424.png</iconset>
-        </property>
-       </widget>
-       <widget class="QFrame" name="frame_3">
+       <widget class="QLabel" name="currentSlideLabel">
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>10</y>
-          <width>781</width>
-          <height>81</height>
+          <y>20</y>
+          <width>200</width>
+          <height>16</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);
-border-radius: 10px;</string>
+         <string notr="true">color: white; font-weight: bold; font-size: 12px;</string>
         </property>
-        <property name="frameShape">
-         <enum>QFrame::StyledPanel</enum>
+        <property name="text">
+         <string>Не подключено</string>
         </property>
-        <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
+       </widget>
+       <widget class="QLabel" name="presentationTitleLabel">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>20</y>
+          <width>211</width>
+          <height>16</height>
+         </rect>
         </property>
-        <widget class="QWidget" name="headerWidget" native="true">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>10</y>
-           <width>761</width>
-           <height>60</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: #2c3e50; border-radius: 10px;</string>
-         </property>
-         <widget class="QLabel" name="currentSlideLabel">
-          <property name="geometry">
-           <rect>
-            <x>20</x>
-            <y>20</y>
-            <width>121</width>
-            <height>16</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color: white; font-weight: bold;</string>
-          </property>
-          <property name="text">
-           <string>Текущий слайд</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="presentationLabel">
-          <property name="geometry">
-           <rect>
-            <x>420</x>
-            <y>20</y>
-            <width>121</width>
-            <height>16</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color: white;</string>
-          </property>
-          <property name="text">
-           <string>Презентация:</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="presentationTitleLabel">
-          <property name="geometry">
-           <rect>
-            <x>540</x>
-            <y>20</y>
-            <width>211</width>
-            <height>16</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color: white; font-weight: bold;</string>
-          </property>
-          <property name="text">
-           <string>Введение в программирование</string>
-          </property>
-         </widget>
-        </widget>
+        <property name="styleSheet">
+         <string notr="true">color: white; font-weight: bold;</string>
+        </property>
+        <property name="text">
+         <string>Введение в программирование</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="presentationLabel_2">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>20</y>
+          <width>121</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: white;</string>
+        </property>
+        <property name="text">
+         <string>Презентация:</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="mainSlideWidget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>70</y>
+         <width>711</width>
+         <height>651</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: white; border: 2px solid #1e3a5f; border-radius: 5px;</string>
+       </property>
+       <widget class="QLabel" name="mainSlideLabel">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>-1</y>
+          <width>711</width>
+          <height>651</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: black; font-size: 16px;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
        </widget>
       </widget>
       <widget class="QWidget" name="nextSlidesWidget" native="true">
        <property name="geometry">
         <rect>
-         <x>10</x>
-         <y>20</y>
+         <x>1010</x>
+         <y>70</y>
          <width>251</width>
-         <height>781</height>
+         <height>661</height>
         </rect>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: white; border: 2px solid #1e3a5f; border-radius: 5px;</string>
@@ -368,7 +150,7 @@ border-radius: 10px;</string>
          <string notr="true">color: black; font-size: 14px; font-weight: bold;</string>
         </property>
         <property name="text">
-         <string>Slides</string>
+         <string>Следующие слайды</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -377,10 +159,10 @@ border-radius: 10px;</string>
        <widget class="QListWidget" name="nextSlidesList">
         <property name="geometry">
          <rect>
-          <x>10</x>
+          <x>0</x>
           <y>40</y>
           <width>241</width>
-          <height>741</height>
+          <height>881</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -388,13 +170,13 @@ border-radius: 10px;</string>
         </property>
        </widget>
       </widget>
-      <widget class="QFrame" name="frame_2">
+      <widget class="QWidget" name="sidebar" native="true">
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>810</y>
-         <width>1081</width>
-         <height>131</height>
+         <y>0</y>
+         <width>261</width>
+         <height>1151</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -402,25 +184,468 @@ border-radius: 10px;</string>
 padding: 20px 0px;
 border-right: 3px solid #1e3a5f;</string>
        </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-       <widget class="QWidget" name="widget" native="true">
+       <widget class="QLabel" name="logoTitle">
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>10</y>
-          <width>1061</width>
-          <height>111</height>
+          <y>20</y>
+          <width>241</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>13</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:white</string>
+        </property>
+        <property name="text">
+         <string>LO Impress Remote Desktop</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="logoTitle_2">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>40</y>
+          <width>181</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:white</string>
+        </property>
+        <property name="text">
+         <string>Удаленное управление</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="logoTitle_3">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>60</y>
+          <width>181</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:white</string>
+        </property>
+        <property name="text">
+         <string>презентациями</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="connectionPanel" native="true">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>100</y>
+          <width>230</width>
+          <height>131</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: white; border: 2px solid #1e3a5f; border-radius: 5px;</string>
+         <string notr="true">background-color: #34495e; border-radius: 5px; padding: 10px;</string>
+        </property>
+        <widget class="QLineEdit" name="ipAddressInput">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>210</width>
+           <height>25</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    background-color: white;
+    border: 1px solid #bdc3c7;
+    border-radius: 3px;
+    padding: 2px 8px;
+    font-size: 11px;
+}</string>
+         </property>
+         <property name="placeholderText">
+          <string>192.168.1.100</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="connectButton">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>45</y>
+           <width>100</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 11px;
+}
+QPushButton:hover {
+    background-color: #219653;
+}
+QPushButton:disabled {
+    background-color: #95a5a6;
+}</string>
+         </property>
+         <property name="text">
+          <string>Подключиться</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="disconnectButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>45</y>
+           <width>100</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 11px;
+}
+QPushButton:hover {
+    background-color: #c0392b;
+}
+QPushButton:disabled {
+    background-color: #95a5a6;
+}</string>
+         </property>
+         <property name="text">
+          <string>Отключиться</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="connectionStatusLabel">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>90</y>
+           <width>210</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #ecf0f1; font-size: 10px; background-color: #2c3e50; padding: 5px; border-radius: 3px;</string>
+         </property>
+         <property name="text">
+          <string>Статус: Не подключено</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="controlsPanel" native="true">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>240</y>
+          <width>230</width>
+          <height>241</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #34495e; border-radius: 5px; padding: 15px;</string>
+        </property>
+        <widget class="QLabel" name="controlsTitle">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>210</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: white; font-weight: bold; font-size: 12px;</string>
+         </property>
+         <property name="text">
+          <string>Управление презентацией</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="startPresentationButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>80</y>
+           <width>180</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #9b59b6;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 10px;
+}
+QPushButton:hover {
+    background-color: #8e44ad;
+}
+QPushButton:disabled {
+    background-color: #95a5a6;
+}</string>
+         </property>
+         <property name="text">
+          <string>▶ Начать презентацию</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="stopPresentationButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>130</y>
+           <width>180</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 10px;
+}
+QPushButton:hover {
+    background-color: #d35400;
+}
+QPushButton:disabled {
+    background-color: #95a5a6;
+}</string>
+         </property>
+         <property name="text">
+          <string>⏹ Остановить презентацию</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="blankScreenButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>180</y>
+           <width>180</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 10px;
+}
+QPushButton:hover {
+    background-color: #e67e22;
+}
+QPushButton:disabled {
+    background-color: #95a5a6;
+}</string>
+         </property>
+         <property name="text">
+          <string>⚫ Пустой экран</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QLabel" name="logoTitle_4">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>850</y>
+          <width>181</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:white</string>
+        </property>
+        <property name="text">
+         <string>Эльмир Аббасов</string>
         </property>
        </widget>
+       <widget class="QLabel" name="logoTitle_5">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>870</y>
+          <width>181</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:white</string>
+        </property>
+        <property name="text">
+         <string>Докладчик</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="notesWidget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>330</x>
+         <y>790</y>
+         <width>791</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: white; border: 2px solid #1e3a5f; border-radius: 5px; padding: 10px;</string>
+       </property>
+       <widget class="QLabel" name="notesTitleLabel">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>161</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: black; font-weight: bold;</string>
+        </property>
+        <property name="text">
+         <string>Заметки к слайду:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="notesContentLabel">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>50</y>
+          <width>731</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #2c3e50; font-size: 11px; background-color:  #e8f4f8; padding: 8px; border-radius: 3px;</string>
+        </property>
+        <property name="text">
+         <string>Заметки появятся здесь после подключения к презентации...</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignTop</set>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="nextSlideButton">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>760</x>
+         <y>730</y>
+         <width>85</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #27ae60;
+}
+QPushButton:disabled {
+    background-color: #95a5a6;
+}</string>
+       </property>
+       <property name="text">
+        <string>Вперед ➡</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="prevSlideButton_2">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>480</x>
+         <y>730</y>
+         <width>85</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #2980b9;
+}
+QPushButton:disabled {
+    background-color: #95a5a6;
+}</string>
+       </property>
+       <property name="text">
+        <string>⬅ Назад</string>
+       </property>
       </widget>
      </widget>
     </item>

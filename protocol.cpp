@@ -12,7 +12,7 @@ const QString Protocol::Messages::VALIDATING = "LO_SERVER_VALIDATING_PIN";
 const QString Protocol::Messages::ADVERTISE = "LOREMOTE_ADVERTISE";
 
 const QString Protocol::Messages::SLIDE_SHOW_STARTED = "slideshow_started";
-const QString Protocol::Messages::SLIDE_SHOW_FINISHED = "slideshow_started";
+const QString Protocol::Messages::SLIDE_SHOW_FINISHED = "slideshow_finished";
 const QString Protocol::Messages::SLIDE_UPDATED ="slide_updated";
 const QString Protocol::Messages::SLIDE_PREVIEW = "slide_preview";
 const QString Protocol::Messages::SLIDE_NOTES =  "slide_notes";

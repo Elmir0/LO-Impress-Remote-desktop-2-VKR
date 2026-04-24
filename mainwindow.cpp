@@ -459,7 +459,7 @@ void MainWindow::updateNextSlidesList(int currentSlide)
 void MainWindow::on_pushButton_clicked()
 {
     // Заглушка - кнопка не используется
-    qDebug() << "ℹ️ pushButton нажата (не используется)";
+    qDebug() << "pushButton нажата (не используется)";
 }
 
 
@@ -480,7 +480,7 @@ void MainWindow::on_laser_Button_clicked()
         ui->labelCordinat->clear();
         m_commands->stopPointer();
 
-        // ✅ Возвращаем цвет
+        
         ui->laser_Button->setStyleSheet(
             "QPushButton { background-color: #4CAF50; color: white; }");
     }
@@ -497,17 +497,17 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event)
 
             ui->labelCordinat->setText(QString("X: %1, Y: %2").arg(x).arg(y));
 
-            // ✅ НОРМАЛИЗУЕМ КООРДИНАТЫ (0-1) и ОТПРАВЛЯЕМ
+            
             QSize size = ui->mainSlideLabel->size();
             if (size.width() > 0 && size.height() > 0) {
                 float normX = (float)x / size.width();
                 float normY = (float)y / size.height();
-                m_commands->movePointer(normX, normY);  // ← отправка в LibreOffice
+                m_commands->movePointer(normX, normY);  
             }
             return true;
         }
 
-        // ✅ КЛИК МЫШИ - следующий слайд
+        
         if (event->type() == QEvent::MouseButtonPress) {
             m_commands->performNextTransition();
             return true;

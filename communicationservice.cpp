@@ -34,19 +34,19 @@ CommunicationService::~CommunicationService() {
 }
 
 void CommunicationService::startServersSearch() {
-    // TODO: реализовать позже
+    
 }
 
 void CommunicationService::addServer(const QString& address, const QString& name) {
-    // TODO: реализовать позже
+    
 }
 
 void CommunicationService::removeServer(Server* aServer) {
-    // TODO: реализовать позже
+    
 }
 
 QList<Server*> CommunicationService::getServers() {
-    return QList<Server*>();  // TODO: реализовать позже
+    return QList<Server*>();  
 }
 
 // ОСНОВНОЙ МЕТОД ПОДКЛЮЧЕНИЯ

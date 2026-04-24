@@ -89,3 +89,5 @@ QPixmap slideshow::getPixmap(int index) const
 {
     return mPixmaps.value(index);
 }
+
+

@@ -369,7 +369,7 @@ QPushButton:disabled {
           <x>10</x>
           <y>240</y>
           <width>230</width>
-          <height>241</height>
+          <height>301</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -482,6 +482,23 @@ QPushButton:disabled {
          </property>
          <property name="text">
           <string>⚫ Пустой экран</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="laser_Button">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>230</y>
+           <width>181</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">    background-color: #95a5a6;
+</string>
+         </property>
+         <property name="text">
+          <string>Указка</string>
          </property>
         </widget>
        </widget>
@@ -645,6 +662,19 @@ QPushButton:disabled {
        </property>
        <property name="text">
         <string>⬅ Назад</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelCordinat">
+       <property name="geometry">
+        <rect>
+         <x>1130</x>
+         <y>860</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
        </property>
       </widget>
      </widget>

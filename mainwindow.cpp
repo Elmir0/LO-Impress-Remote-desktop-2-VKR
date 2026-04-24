@@ -7,6 +7,9 @@
 #include <QTimer>
 #include <QKeyEvent>
 #include <QShortcut>
+#include <QMouseEvent>
+#include <QEvent>
+
 //gggg
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -17,6 +20,8 @@ MainWindow::MainWindow(QWidget *parent)
     , m_slideShow(nullptr)
 {
     ui->setupUi(this);
+    ui->mainSlideLabel->setMouseTracking(true);
+    ui->mainSlideLabel->installEventFilter(this);
     QShortcut *right = new QShortcut(QKeySequence(Qt::Key_Right), this);
     connect(right, &QShortcut::activated, ui->nextSlideButton, &QPushButton::animateClick);
 
@@ -255,14 +260,24 @@ void MainWindow::on_nextSlideButton_clicked()
 //  КНОПКА "СТАРТ ПРЕЗЕНТАЦИИ"
 void MainWindow::on_startPresentationButton_clicked()
 {
+
     qDebug() << "\n=== НАЖАТА КНОПКА 'СТАРТ ПРЕЗЕНТАЦИИ' ===";
+    if (m_commands) {
+        resetLaserButtonState();  // ← Сбрасываем указку
+        m_commands->startPresentation();
+    } else {
+        QMessageBox::warning(this, "Ошибка", "Сначала подключитесь к компьютеру!");
+    }
+
 
     if (m_commands) {
         m_commands->startPresentation();
     } else {
         QMessageBox::warning(this, "Ошибка", "Сначала подключитесь к компьютеру!");
     }
+
 }
+
 
 //  КНОПКА "СТОП ПРЕЗЕНТАЦИИ"
 void MainWindow::on_stopPresentationButton_clicked()
@@ -306,6 +321,12 @@ void MainWindow::updateUIState(bool connected)
     ui->startPresentationButton->setEnabled(canControl);
     ui->stopPresentationButton->setEnabled(canControl);
     ui->blankScreenButton->setEnabled(canControl);
+    ui->laser_Button->setEnabled(canControl);
+    if (!connected && laserEnabled) {
+        laserEnabled = false;
+        ui->laser_Button->setText("Указка");
+        ui->labelCordinat->clear();
+    }
 
     qDebug() << "Кнопка 'Назад':" << (ui->prevSlideButton_2->isEnabled() ? "ВКЛ" : "ВЫКЛ");
     qDebug() << "Кнопка 'Вперед':" << (ui->nextSlideButton->isEnabled() ? "ВКЛ" : "ВЫКЛ");
@@ -428,5 +449,82 @@ void MainWindow::updateNextSlidesList(int currentSlide)
 
     // размер иконок
     ui->nextSlidesList->setIconSize(QSize(200, 120));
+}
+
+
+
+
+
+
+void MainWindow::on_pushButton_clicked()
+{
+    // Заглушка - кнопка не используется
+    qDebug() << "ℹ️ pushButton нажата (не используется)";
+}
+
+
+void MainWindow::on_laser_Button_clicked()
+{
+    if(ui->laser_Button->text()=="Указка"){
+        qDebug()<<"Лазерная указка включена";
+        ui->laser_Button->setText("Отключить");
+        laserEnabled =true;
+        m_commands->startPointer(0.5f, 0.5f);  // центр слайда
+        ui->laser_Button->setStyleSheet(
+            "QPushButton { background-color: #f44336; color: white; }");
+
+    }else{
+        ui->laser_Button->setText("Указка");
+        qDebug()<<"Лазерная указка отключена";
+        laserEnabled = false;
+        ui->labelCordinat->clear();
+        m_commands->stopPointer();
+
+        // ✅ Возвращаем цвет
+        ui->laser_Button->setStyleSheet(
+            "QPushButton { background-color: #4CAF50; color: white; }");
+    }
+
+}
+
+bool MainWindow::eventFilter(QObject *obj, QEvent *event)
+{
+    if (obj == ui->mainSlideLabel && laserEnabled && m_commands) {
+        if (event->type() == QEvent::MouseMove) {
+            QMouseEvent *mouseEvent = static_cast<QMouseEvent*>(event);
+            int x = mouseEvent->pos().x();
+            int y = mouseEvent->pos().y();
+
+            ui->labelCordinat->setText(QString("X: %1, Y: %2").arg(x).arg(y));
+
+            // ✅ НОРМАЛИЗУЕМ КООРДИНАТЫ (0-1) и ОТПРАВЛЯЕМ
+            QSize size = ui->mainSlideLabel->size();
+            if (size.width() > 0 && size.height() > 0) {
+                float normX = (float)x / size.width();
+                float normY = (float)y / size.height();
+                m_commands->movePointer(normX, normY);  // ← отправка в LibreOffice
+            }
+            return true;
+        }
+
+        // ✅ КЛИК МЫШИ - следующий слайд
+        if (event->type() == QEvent::MouseButtonPress) {
+            m_commands->performNextTransition();
+            return true;
+        }
+    }
+    return QMainWindow::eventFilter(obj, event);
+}
+
+void MainWindow::resetLaserButtonState()
+{
+    if (laserEnabled) {
+        qDebug() << " Сбрасываем состояние указки";
+        laserEnabled = false;
+        ui->laser_Button->setText("Указка");
+        ui->labelCordinat->clear();
+        ui->laser_Button->setStyleSheet(
+            "QPushButton { background-color: #4CAF50; color: white; }");
+    }
 }
 

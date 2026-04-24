@@ -29,6 +29,7 @@ private slots:
     void on_startPresentationButton_clicked(); //  Начать презентацию
     void on_stopPresentationButton_clicked();  //  Остановить презентацию
     void on_blankScreenButton_clicked();       // Пустой экран
+    void on_laser_Button_clicked();         // лазерная указка
 
     // Обработчики состояния подключения
     void onSocketConnected();
@@ -45,6 +46,10 @@ private slots:
     // вспомогательный метод:
     void updateSlideDisplay(int slideIndex);
     void updateNextSlidesList(int currentSlide);
+    void on_pushButton_clicked();
+
+
+
 private:
     Ui::MainWindow *ui;
 
@@ -57,9 +62,12 @@ private:
     int m_errorMessageCount;  // Счетчик сообщений об ошибках
     QString m_currentPin;  // Сохраняем текущий PIN
     slideshow* m_slideShow;
+    bool laserEnabled=false;
+    void resetLaserButtonState();  // Сброс состояния указки
+
 protected:
      void keyPressEvent(QKeyEvent *event) override;
-
+    bool eventFilter(QObject *obj, QEvent *event) override;
 };
 
 #endif // MAINWINDOW_H
